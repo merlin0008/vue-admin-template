@@ -76,6 +76,8 @@
                 var ieV = IEVersion();
                 if (ieV == -1) { // 不是IE则跳转首页，否则就现在的提示页喽
                     window.location.href = "./index.html";// 可以修改为自己定义的页面
+                    // 20181121 james 将原始访问的子路径及参数带到新的页面
+                    // window.location.href = "./index.html" + window.location.pathname + window.location.search;
                 }
                 else {
                     addIETips(ieV); // IE浏览器时再加载提示信息页
